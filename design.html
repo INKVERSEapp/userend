@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>-INKVERSE- userend</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #spreadsheets-design {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #spreadsheets-design img {
+      width: 33%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Choose from design</h1>
+    </header>
+
+    <div class="content">
+
+      <div id="loading" style="text-align:center;">
+        <img src="loading.gif" height="100px">
+        <h3>loading...</h3>
+      </div>
+
+      <div id="spreadsheets-design">
+        <!-- Images will be dynamically inserted here -->
+      </div>
+
+      <script>
+        window.onload = function () {
+          const lscreen = document.getElementById('loading');
+          lscreen.classList.add('loaded');
+        }
+
+        const apiURL = 'https://script.google.com/macros/s/AKfycbxsQLxd_s78ozChdPpU9snPMG34DdzI6RVGo6sZpx8bN4-9B-5lLSGAAqsaOoiQwwQb/exec';
+
+        async function loadWork() {
+          try {
+            const response = await fetch(apiURL);
+            if (!response.ok) {
+              throw new Error(`Failed to fetch data: ${response.statusText}`);
+            }
+
+            const work = await response.json();
+            const container = document.getElementById('spreadsheets-design');
+
+            work.forEach(entry => {
+              // Only add non-empty work images
+              ['work1', 'work2', 'work3'].forEach(workKey => {
+                if (entry[workKey]) {
+                  const img = document.createElement('img');
+                  img.src = entry[workKey];
+                  container.appendChild(img);
+                }
+              });
+            });
+          } catch (error) {
+            console.error("Error loading data:", error);
+          }
+        }
+
+        loadWork();
+      </script>
+
+    </div>
+
+    <footer>
+      <nav>
+        <button><a href="Home.html">
+            <div class="btntext" style="font-size:14px;">
+              Home</div>
+            <img src="home.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="checklist.html">
+            <div class="btntext" style="font-size:14px;">
+              Check</div>
+            <img src="check.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="design.html">
+            <div class="btntext" style="font-size:14px;">
+              Design</div>
+            <img src="pen.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="specialist.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Specialist</div>
+            <img src="special.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="artist.html">
+            <div class="btntext" style="font-size:15px;">
+              Artist</div>
+            <img src="artist.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="booking.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Book-Now</div>
+            <img src="book.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="talkroom.html">
+            <div class="btntext" style="font-size:15px;">
+              Chat</div>
+            <img src="chat.png" alt="icon" width="40px">
+          </a>
+        </button>
+      </nav>
+    </footer>
+
+  </div>
+
+</body>
+</html>

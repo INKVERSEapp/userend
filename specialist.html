@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>-INKVERSE- userend</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    select {
+      width: 90%;
+      height: 30px;
+      margin: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Choose from specialists</h1>
+    </header>
+
+    <div class="content">
+
+      <select name="parts" id="parts">
+        <option value="NA">Chose your tattoo parts</option>
+        <option value="face">Face</option>
+        <option value="arm">Arm</option>
+        <option value="back">Back</option>
+        <option value="ancle">Ancle</option>
+      </select>
+
+      <div id="loading" style="text-align:center; display:none">
+        <img src="loading.gif" height="100px">
+        <h3>loading...</h3>
+      </div>
+
+      <div class="spreadsheets-specialist">
+
+        <!-- Template to clone 
+            style でデータなしのクローンを見せない-->
+        <div class="fromGS-specialist" style="display:none;">
+
+          <table border="1">
+            <tr>
+              <td colspan="2" class="GS-artist"></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="example">
+                  <img class="GS-ex1" src="" alt="Artwork 1" width="30%">
+                  <img class="GS-ex2" src="" alt="Artwork 2" width="30%">
+                  <img class="GS-ex3" src="" alt="Artwork 3" width="30%">
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <script type="text/javascript" src="specialist.js"></script>
+
+      </div>
+
+    </div>
+
+    <footer>
+      <nav>
+        <button><a href="Home.html">
+            <div class="btntext" style="font-size:14px;">
+              Home</div>
+            <img src="home.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="checklist.html">
+            <div class="btntext" style="font-size:14px;">
+              Check</div>
+            <img src="check.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="design.html">
+            <div class="btntext" style="font-size:14px;">
+              Design</div>
+            <img src="pen.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="specialist.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Specialist</div>
+            <img src="special.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="artist.html">
+            <div class="btntext" style="font-size:15px;">
+              Artist</div>
+            <img src="artist.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="booking.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Book-Now</div>
+            <img src="book.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="talkroom.html">
+            <div class="btntext" style="font-size:15px;">
+              Chat</div>
+            <img src="chat.png" alt="icon" width="40px">
+          </a>
+        </button>
+      </nav>
+    </footer>
+  </div>
+
+</body>
+
+</html>

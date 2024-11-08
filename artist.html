@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>-INKVERSE- userend</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .selection {
+      padding: 10px;
+      font-weight: bold;
+    }
+    select {
+      width: 60%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Choose from Artists</h1>
+    </header>
+
+    <div class="content">
+
+      <div id="loading" style="text-align: center;">
+        <img src="loading.gif" height="100px">
+        <h3>loading...</h3>
+      </div>
+      <script>
+        window.onload = function () {
+          const lscreen = document.getElementById('loading');
+          lscreen.classList.add('loaded');
+        }
+      </script>
+
+      <div class="selection">
+        Sort by:
+        <select name="parts" id="parts">
+          <option value="NA">Chose type</option>
+          <option value="recom">Recommendation</option>
+          <option value="review">Review</option>
+          <option value="price">Avarage Price</option>
+          <option value="new">New coming</option>
+        </select>
+      </div>
+
+
+      <div class="spreadsheets-artist">
+
+        <!-- Template to clone 
+            style でデータなしのクローンを見せない-->
+        <div class="fromGS-artist" style="display:none;">
+
+          <table border="1">
+            <tr>
+              <td colspan="2" class="GS-artist"></td>
+            </tr>
+            <tr>
+              <td><img class="GS-profile" src="" alt="Artist Profile" width="100"></td>
+              <td><strong>introduction</strong><br>
+                <p class="GS-description"></p>
+                <p class="GS-contact"></p>
+                specialist: <p class="specialist"></p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="example">
+                  <img class="GS-ex1" src="" alt="Artwork 1">
+                  <img class="GS-ex2" src="" alt="Artwork 2">
+                  <img class="GS-ex3" src="" alt="Artwork 3">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <p class="GS-review"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <script type="text/javascript" src="data.js"></script>
+
+      </div>
+    </div>
+
+    <footer>
+      <nav>
+        <button><a href="Home.html">
+            <div class="btntext" style="font-size:14px;">
+              Home</div>
+            <img src="home.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="checklist.html">
+            <div class="btntext" style="font-size:14px;">
+              Check</div>
+            <img src="check.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="design.html">
+            <div class="btntext" style="font-size:14px;">
+              Design</div>
+            <img src="pen.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="specialist.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Specialist</div>
+            <img src="special.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="artist.html">
+            <div class="btntext" style="font-size:15px;">
+              Artist</div>
+            <img src="artist.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="booking.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Book-Now</div>
+            <img src="book.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="talkroom.html">
+            <div class="btntext" style="font-size:15px;">
+              Chat</div>
+            <img src="chat.png" alt="icon" width="40px">
+          </a>
+        </button>
+      </nav>
+    </footer>
+  </div>
+
+</body>
+</html>

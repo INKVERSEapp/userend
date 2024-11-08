@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>-INKVERSE- userend</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1> Booking </h1>
+    </header>
+
+    <div class="content">
+
+      <div id="loading" style="text-align: center;">
+        <img src="loading.gif" height="100px">
+        <h3>loading...</h3>
+      </div>
+      <script>
+        window.onload = function () {
+          const lscreen = document.getElementById('loading');
+          lscreen.classList.add('loaded');
+        }
+      </script>
+
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FSingapore&bgcolor=%23ffffff&showTitle=0&src=dGF0dG9hcHAyQGdtYWlsLmNvbQ&src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043"
+        style="border:solid 0" width="100%" height="600px" frameborder="0" scrolling="no">
+      </iframe>
+
+    </div>
+
+    <footer>
+      <nav>
+        <button><a href="Home.html">
+            <div class="btntext" style="font-size:14px;">
+              Home</div>
+            <img src="home.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="checklist.html">
+            <div class="btntext" style="font-size:14px;">
+              Check</div>
+            <img src="check.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="design.html">
+            <div class="btntext" style="font-size:14px;">
+              Design</div>
+            <img src="pen.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="specialist.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Specialist</div>
+            <img src="special.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="artist.html">
+            <div class="btntext" style="font-size:15px;">
+              Artist</div>
+            <img src="artist.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="booking.html">
+            <div class="btntext" style="font-size:9px; font-weight:bold;">
+              Book-Now</div>
+            <img src="book.png" alt="icon" width="40px">
+          </a></button>
+        <button><a href="talkroom.html">
+            <div class="btntext" style="font-size:15px;">
+              Chat</div>
+            <img src="chat.png" alt="icon" width="40px">
+          </a>
+        </button>
+      </nav>
+    </footer>
+  </div>
+</body>
+
+</html>
